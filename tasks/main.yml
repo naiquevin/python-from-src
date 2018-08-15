@@ -2,7 +2,7 @@
 # tasks file for python-from-src
 
 - set_fact:
-    pyfsrc_exec: "python{{ pyfsrc_version|regex_replace('(\\d+\\.\\d+)\\..*$', '\\\\1') }}"
+    pyfsrc_exec: "python{{ pyfsrc_version|regex_replace('(\\d+\\.\\d+)\\..*$', '\\1') }}"
 
 - name: check if python version installed
   command: "which {{ pyfsrc_exec }}"
